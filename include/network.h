@@ -1,17 +1,11 @@
 #pragma once
-typedef int SOCKET;
-#include <networkUtils.h>
-
-enum ESocketType {
-  //
-  CLIENT = 0,
-  SERVER = 10,
-};
+typedef signed int SOCKET;
+#include "networkUtils.h"
 
 class Socket {
-private:
+protected:
   SOCKET sock;
-  void initSocket(ESocketType SType);
+  virtual void initSocket();
 
 public:
   Socket();
@@ -19,20 +13,10 @@ public:
 };
 
 Socket ::Socket() {
-  //
-  SOCKET newSock = socket(AF_INET, SOCK_STREAM, 0);
-  if (newSock < 0) {
-    //
-  }
+  this->sock = -1;
+  log("这是Socket");
 }
-
-void Socket::initSocket(ESocketType SType) {
-  switch (SType) {
-  case CLIENT:
-    log("创建客户端\t");
-    break;
-  case SERVER:
-    log("创建服务器\t");
-    break;
-  }
+void Socket::initSocket() {
+  log("Socket 创建套接字");
+  this->sock = CreateSocket();
 }

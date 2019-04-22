@@ -5,6 +5,7 @@
 template <typename... Args> void log(Args &&... args) {
   std::cout << __DATE__ << __TIME__ << ":\t";
   ((std::cout << args << ' '), ...);
+  std::cout << std::endl;
 }
 
 void D_log(...) {
