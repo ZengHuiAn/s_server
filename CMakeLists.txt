@@ -5,4 +5,10 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(./include)
 
-add_executable(TCPRemote main.cpp)
+#aux_source_directory(./src/ RESOURCE)
+
+include_directories(./src/)
+
+
+add_executable(TCPRemote src/main.cpp)
+target_link_libraries(TCPRemote mysqlclient)

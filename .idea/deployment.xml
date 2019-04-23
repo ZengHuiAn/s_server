@@ -2,13 +2,14 @@
 <project version="4">
   <component name="PublishConfigData">
     <serverData>
-      <paths name="Remote (56d27224-0cd8-41df-bbc1-7d43f7fdf246)">
+      <paths name="Remote111 (56d27224-0cd8-41df-bbc1-7d43f7fdf246)">
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/tmp.q756gt7cwM" local="$PROJECT_DIR$" />
           </mappings>
           <excludedPaths>
             <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug-remote111" />
           </excludedPaths>
         </serverdata>
       </paths>
